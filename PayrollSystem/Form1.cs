@@ -71,5 +71,25 @@ namespace PayrollSystem
                 MessageBox.Show("An error occurred during calculation: " + ex.Message);
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            txtHours.Clear();
+            txtDependents.Clear();
+
+            txtGrossPay.Clear();
+            txtUIF.Clear();
+            txtMembership.Clear();
+            txtPAYE.Clear();
+            txtNET.Clear();
+
+            txtName.Focus();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

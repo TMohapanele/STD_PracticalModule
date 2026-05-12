@@ -133,6 +133,7 @@
             btnReset.TabIndex = 8;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnExit
             // 
@@ -142,6 +143,7 @@
             btnExit.TabIndex = 9;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // lblGrossPay
             // 

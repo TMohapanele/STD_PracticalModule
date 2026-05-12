@@ -14,7 +14,7 @@
             return grossPay * 0.01m; // 1% UIF contribution
         }
 
-        public decimal ClaculateMembership(decimal grossPay)
+        public decimal CalculateMembership(decimal grossPay)
         {
             return grossPay * 0.13m; 
         }
