@@ -123,6 +123,7 @@
             btnCalculate.TabIndex = 7;
             btnCalculate.Text = "Calculate Net Pay";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // btnReset
             // 
