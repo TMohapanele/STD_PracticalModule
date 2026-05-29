@@ -27,20 +27,16 @@ namespace PayrollSystemTests
             TestContext.WriteLine($"Actual: {actual}");
 
             Assert.AreEqual(expected, actual);
-
         }
 
         [TestMethod]
         [TestCategory("UIF")]
-        public void ClaculatedUIF_ShouldReturnCorrectValue()
+        public void CalculateUIF_ShouldReturnCorrectValue()
         {
             decimal grossPay = 19000m;
 
             decimal expected = 190m;
-
             decimal actual = calculator.CalculateUIF(grossPay);
-            TestContext.WriteLine($"Expected: {expected}");
-            TestContext.WriteLine($"Actual: {actual}");
 
             Assert.AreEqual(expected, actual);
         }
@@ -52,13 +48,42 @@ namespace PayrollSystemTests
             decimal grossPay = 19000m;
 
             decimal expected = 2470m;
-
             decimal actual = calculator.CalculateMembership(grossPay);
-            TestContext.WriteLine($"Expected: {expected}");
-            TestContext.WriteLine($"Actual: {actual}");
 
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        [TestCategory("PAYE")]
+        public void CalculatePAYE_ShouldReturnCorrectValue()
+        {
+            decimal grossPay = 19000m;
+            int dependents = 2;
+
+            decimal expected = 4203.75m;
+            decimal actual = calculator.CalculatePAYE(grossPay, dependents);
+
+            Assert.AreEqual(expected, actual, 0.01m);
+        }
+
+        [TestMethod]
+        [TestCategory("Net Pay")]
+        public void CalculateNetPay_ShouldReturnCorrectValue()
+        {
+            decimal grossPay = 19000m;
+            decimal uif = 190m;
+            decimal paye = 4203.75m;
+            decimal membership = 2470m;
+
+            decimal expected = 12136.25m;
+
+            decimal actual = calculator.CalculateNetPay(
+                grossPay,
+                uif,
+                paye,
+                membership);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

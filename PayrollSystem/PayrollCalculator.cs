@@ -2,7 +2,7 @@
 {
     public class PayrollCalculator
     {
-        private const decimal HourlyRate = 15.00m;
+        private const decimal HourlyRate = 950m;
 
         public decimal CalculateGrossPay(decimal hoursWorked)
         {
