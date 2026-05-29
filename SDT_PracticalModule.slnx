@@ -3,4 +3,5 @@
     <File Path=".gitignore" />
   </Folder>
   <Project Path="PayrollSystem/PayrollSystem.csproj" />
+  <Project Path="PayrollSystemTests/PayrollSystemTests.csproj" Id="4dd72205-2597-476d-9f9e-95144d52ddb4" />
 </Solution>
